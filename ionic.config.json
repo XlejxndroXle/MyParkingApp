@@ -1,0 +1,7 @@
+{
+  "name": "Myparking",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
