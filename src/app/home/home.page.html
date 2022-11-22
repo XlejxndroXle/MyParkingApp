@@ -1,20 +1,46 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+<ion-app>
+  <ion-header  class="ion-no-border"[translucent]="true">
+    <ion-toolbar color="none" >
+      <img  src="../../assets/img/pleca-01.png" />
     </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+</ion-header>
+<ion-content [fullscreen]="true" class="ion-padding ion-text-center">
+<div>
+  <div class="logo">
+    <img src="../assets/img/LOGO.png" alt="">
+  </div>  
+  <div class="form">
+  <ion-card>
+    <br>
+<ion-title>INICIAR SESIÓN</ion-title>
+  <form>
+    <ion-item color="none">
+      <ion-icon slot="start" name="person-outline"></ion-icon>
+      <ion-label position="floating">Correo Electronico</ion-label>
+      <ion-input   placeholder="Ingrese su Correo"></ion-input>
+    </ion-item>
+    <ion-item color="none">
+      <ion-icon slot="start" name="key-outline"></ion-icon>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input  type="password" placeholder="Ingrese su Contraseña" ></ion-input>
+    </ion-item>
+    
+    <div class="button">
+      <ion-button  color="success" class="boton" size="default" type="submit" shape="round"  [routerLink]="['/menu/usuario']" routerLinkActive="router-link-active">Ingresar</ion-button>
+
+    </div>
+  </form>  
+</ion-card>
+<br>
   </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<label>@Hackaton2022</label>
 </ion-content>
+
+
+</ion-app>

@@ -1,0 +1,32 @@
+<ion-header >
+  <ion-toolbar color="success">
+    <ion-item lines="none" color="none">
+      <ion-title>Ayuda</ion-title>
+      <ion-icon name="power-outline" [routerLink]="['/home']" routerLinkActive="router-link-active"></ion-icon>
+      <ion-buttons slot="start">
+      </ion-buttons>
+    </ion-item>
+   
+  </ion-toolbar>  
+</ion-header>
+<ion-content >
+  <ion-card color="none">
+    <ion-label>Es importante notificar al area de administración, 
+      si alguno de tus datos a sido modificado; En caso de </ion-label> <br>
+      <ion-icon name="albums-outline"></ion-icon>Cambio de Placas.<br>
+      <ion-icon name="car-outline"></ion-icon>Cambio de Vehiculo.<br>
+      <ion-icon name="id-card-outline"></ion-icon>Cambio de Tarjeta de circulación.<br>
+
+<ion-label>
+-Recuerda mostrar tu codigo QR al personal encargado de acceso
+del plantel. Según sea el caso de ingreso o salida del mismo. 
+</ion-label><br>
+<ion-label>
+-Ninguna otra persona podra acceder aun teniendo el codigo QR, solo el dueño del vehiculo.
+</ion-label><br>
+<ion-label>
+-Tampoco podra acceder si los datos de la app no coinciden con los reales.
+</ion-label><br>
+  </ion-card>
+
+</ion-content>
