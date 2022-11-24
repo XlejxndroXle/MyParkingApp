@@ -49,5 +49,12 @@
   <p>Correo Electronico: ing.alejandro99@gmail.com</p>
   <p>N° Tarjeta de circulación: <b>YTR0F01010202</b></p>
 
+<ion-card *ngIf="caracteres">
+  <label *ng="let caracter of caracteres">
+    {{caracter.Nombre}}
+  </label>
+</ion-card>
+  
+
 
 </ion-content>
