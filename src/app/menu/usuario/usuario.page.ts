@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TeamService } from '../../services/team.service';
+import { Team } from 'src/app/models/team';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -6,17 +8,26 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './usuario.page.html',
   styleUrls: ['./usuario.page.scss'],
 })
-export class UsuarioPage implements OnInit {
-  caracteres = [];
-  constructor(private http:HttpClient) { }
+export class UsuarioPage  {
 
-  ngOnInit() {
-    this.http.get<any>('https://myparkingtesithon.000webhostapp.com/json.php')
-    .subscribe(res => {
-      console.log(res);
-      this.caracteres = res.results;
-    })
-    
+  ListTeam:Team[]
+  
+  constructor(private teamService:TeamService) 
+  {
+    this.ListTeam = [];
+    this.loadTeam();
   }
+
+  
+  public loadTeam():void{
+    this.teamService.getTeams().subscribe(
+      (response) => { 
+        this.ListTeam = response
+        console.log(response);
+       },
+      (error) => { console.log(error) })
+  }
+
+ 
 
 }
